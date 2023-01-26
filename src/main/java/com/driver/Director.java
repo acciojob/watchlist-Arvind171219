@@ -1,14 +1,18 @@
 package com.driver;
 
-public class Director {
-    private String name;
-    private int numberofMovies;
-    private double imbRating;
+import org.springframework.stereotype.Component;
 
-    public Director(String name, int numberofMovies, double imbRating) {
-        this.name = name;
-        this.numberofMovies = numberofMovies;
-        this.imbRating = imbRating;
+@Component
+public class Director {
+    public String name;
+    public  int numberOfMovies;
+    public  double imdbRating;
+    Director(){}
+    public   Director(String name,int numberOfMovies, double imdbRating)
+    {
+        this.name=name;
+        this.numberOfMovies = numberOfMovies;
+        this.imdbRating = imdbRating;
     }
 
     public String getName() {
@@ -19,19 +23,19 @@ public class Director {
         this.name = name;
     }
 
-    public int getNumberofMovies() {
-        return numberofMovies;
+    public int getNumberOfMovies() {
+        return numberOfMovies;
     }
 
-    public void setNumberofMovies(int numberofMovies) {
-        this.numberofMovies = numberofMovies;
+    public void setNumberOfMovies(int numberOfMovies) {
+        this.numberOfMovies = numberOfMovies;
     }
 
-    public double getImbRating() {
-        return imbRating;
+    public double getImdbRating() {
+        return imdbRating;
     }
 
-    public void setImbRating(double imbRating) {
-        this.imbRating = imbRating;
+    public void setImdbRating(double imdbRating) {
+        this.imdbRating = imdbRating;
     }
 }
